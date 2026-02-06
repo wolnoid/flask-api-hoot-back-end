@@ -24,7 +24,7 @@ def hoots_index():
 
     connection.commit()
     connection.close()
-    return jsonify({"hoots": consolidated_hoots}), 200
+    return jsonify(consolidated_hoots), 200
   except Exception as error:
     return jsonify({"error": str(error)}), 500
 
